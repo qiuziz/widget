@@ -67,7 +67,7 @@ export default class AdminHome extends Component<any, any> {
       [
         {
           name: 'subapp',
-          entry: `${window.location.host}/react-image-map`,
+          entry: `//:${window.location.host}/react-image-map`,
           container: '#subapp-viewport',
           loader,
           activeRule: '/widget/react-image-map'
