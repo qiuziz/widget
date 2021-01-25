@@ -47,14 +47,17 @@ export default class AdminHome extends Component<any, any> {
     const loader = (loading: any) => {
       const container = document.getElementById('subapp-container');
       ReactDOM.render(
-        <Spin
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%'
-          }}
-          spinning={loading}
-        />,
+        <>
+          <Spin
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%'
+            }}
+            spinning={loading}
+          />
+          <div id="subapp-viewport" />
+        </>,
         container
       );
     };
