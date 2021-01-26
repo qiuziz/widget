@@ -192,7 +192,6 @@ export default class AdminHome extends Component<any, any> {
           <Layout className="widgets-layout-content">
             <Sider
               width={200}
-              className="site-layout-background"
               collapsed={this.state.collapsed}
               onCollapse={this.state.collapsed}
             >
@@ -208,16 +207,10 @@ export default class AdminHome extends Component<any, any> {
                   return <Breadcrumb.Item key={item.id}>{item.title}</Breadcrumb.Item>;
                 })}
               </Breadcrumb>
-              <Content
-                className="site-layout-background"
-                style={{
-                  padding: 24,
-                  margin: 0
-                }}
-              >
+              <Content className="site-layout-background">
                 <div id="subapp-container" className="view"></div>
               </Content>
-              <Footer style={{ textAlign: 'center' }}>Widgets ©2021 Created by qiuz</Footer>
+              <Footer className="widgets-layout-container-footer">Widgets ©2021 Created by qiuz</Footer>
             </Layout>
           </Layout>
         </Layout>
