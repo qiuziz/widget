@@ -52,7 +52,7 @@ export default class AdminHome extends Component<any, any> {
             style={{
               position: 'absolute',
               top: '50%',
-              left: '50%'
+              left: 'calc(50% + 100px)'
             }}
             spinning={loading}
           />
@@ -190,11 +190,7 @@ export default class AdminHome extends Component<any, any> {
             </Row>
           </Header>
           <Layout className="widgets-layout-content">
-            <Sider
-              width={200}
-              collapsed={this.state.collapsed}
-              onCollapse={this.state.collapsed}
-            >
+            <Sider width={200} collapsed={this.state.collapsed} onCollapse={this.state.collapsed}>
               <CustomMenuLeft
                 menus={menu}
                 current={this.state.current}
@@ -210,7 +206,9 @@ export default class AdminHome extends Component<any, any> {
               <Content className="site-layout-background">
                 <div id="subapp-container" className="view"></div>
               </Content>
-              <Footer className="widgets-layout-container-footer">Widgets ©2021 Created by qiuz</Footer>
+              <Footer className="widgets-layout-container-footer">
+                Widgets ©2021 Created by qiuz
+              </Footer>
             </Layout>
           </Layout>
         </Layout>
