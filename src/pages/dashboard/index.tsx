@@ -179,8 +179,8 @@ export default class AdminHome extends Component<any, any> {
     const subTree = this.getSubTree();
     return (
       <BrowserRouter>
-        <Layout style={{ minHeight: '100vh' }}>
-          <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+        <Layout className="widgets-layout">
+          <Header className="header">
             <div className="logo">Widgets</div>
             <Row justify="space-around">
               <Col xs={{ span: 20 }} lg={{ span: 20 }}></Col>
@@ -189,7 +189,7 @@ export default class AdminHome extends Component<any, any> {
               </Col>
             </Row>
           </Header>
-          <Layout style={{ marginTop: 64 }}>
+          <Layout className="widgets-layout-content">
             <Sider
               width={200}
               className="site-layout-background"
@@ -202,8 +202,8 @@ export default class AdminHome extends Component<any, any> {
                 onMenuChange={this.handleMenuChange}
               />
             </Sider>
-            <Layout style={{ padding: '0 24px 24px' }}>
-              <Breadcrumb style={{ margin: '16px 0' }}>
+            <Layout className="widgets-layout-container">
+              <Breadcrumb className="widgets-layout-container-breadcrumd">
                 {this.state.currentMenuPaths.map((item: any) => {
                   return <Breadcrumb.Item key={item.id}>{item.title}</Breadcrumb.Item>;
                 })}

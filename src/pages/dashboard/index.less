@@ -9,6 +9,27 @@
 
 .header {
   background: rgba(0,0,0,0.8);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  min-width: 600px;
+}
+
+.widgets-layout {
+  min-width: 600px;
+  min-height: 100vh;
+
+  &-content {
+    margin-top: 64px;
+  }
+
+  &-container {
+    padding: 0 24px 24px;
+
+    &-breadcrumd {
+      margin: 16px 0;
+    }
+  }
 }
 
 .ant-row-rtl #components-layout-demo-top-side .logo {
